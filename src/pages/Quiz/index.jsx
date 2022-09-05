@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Question, Subject } from "../../components";
+import {
+  Question,
+  Subject,
+  AnswerForm,
+  QuestionNumber,
+} from "../../components";
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
