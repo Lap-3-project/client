@@ -31,7 +31,7 @@ const MultiPlayerLogin = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-
+    
     // the following below helps validate form before submission
     setSubmitForm((prev) => {
       prev = true;
