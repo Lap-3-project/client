@@ -78,10 +78,23 @@ h1,h2 {
 }
 
 
-@media screen and (max-width: 600){
+@media screen 
+and (max-width: 600px)
+{
+ 
+  .btn {
+    font-size: 1.1rem;
+  }
 
   h1,h2 {
-    font-size: 30px;
-  } 
+    font-size: 2.5rem;
+    padding: -50px;
+    /* margin-bottom: 50px; */
+  }
 
+}
+
+
+form {
+  font-size: 1.5rem;
 }
