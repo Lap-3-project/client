@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { io } from "socket.io-client"
 
 import * as Pages from "./pages";
 import { DataProvider } from "./context/dataContext";
 
 function App() {
+  const connect = () => {
+    const socket = io("http://localhost:8001")
+  }
+
+  useEffect(() => {
+    connect();
+  }, []);
+
+
+
   return (
     <DataProvider>
       <Routes>
