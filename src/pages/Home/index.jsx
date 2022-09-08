@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./style.css";
 
+// import { socket } from '../socket/index';
+
 const Home = () => {
   // store if btn is single or multi
 
-  const [player, setPlayer] = useState("");
+  // const [playerCount, setPlayerCount] = useState(0);
+  // const [allUsers, setAllUsers] = useState([]);
 
   const handlePlayer = (e) => {
     e.preventDefault();
@@ -20,6 +23,14 @@ const Home = () => {
   const navigateToMultiPlayer = () => {
     navigate('/create-room')
   }
+
+  //implementing socket 
+  // useEffect(() => {
+  //   socket.on("users", (users) => setPlayerCount(users));
+  //   socket.on("new-user", (allUsers) => {
+  //     setAllUsers(allUsers);
+  //   })
+  // }, []);
 
   return (
     <>
@@ -37,8 +48,8 @@ const Home = () => {
 
       <div className="homeButtons">
 
-      <button class="btn" onClick={navigateToSinglePlayer}>Single Player</button>
-      <button class="btn" onClick={navigateToMultiPlayer}>Multi Player</button>
+      <button className="btn" onClick={navigateToSinglePlayer}>Single Player</button>
+      <button className="btn" onClick={navigateToMultiPlayer}>Multi Player</button>
 {/*
         <button className="btn" value="single" onClick={handlePlayer}>
           Single Player
