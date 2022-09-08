@@ -12,7 +12,7 @@ const CreateRoom = () => {
   const [lastPong, setLastPong] = useState(null);
 
   // "local host for now until deployment"
-  const url = "http://localhost:3001";
+  const url = "http://localhost:8001";
   const socket = io(url);
 
   useEffect(() => {
