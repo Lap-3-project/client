@@ -88,7 +88,6 @@ const SinglePlayerLogin = () => {
               type="text"
               placeholder="Enter nickname"
               value={inputValue.username}
-              // value={inputValue.username} // for testing, it needs to be inputValue???
               onChange={handleUsernameInput}
             />
             {submitForm && !inputValue.username ? (

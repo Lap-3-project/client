@@ -23,7 +23,7 @@ beforeEach(() => {
 
 describe("MultiPlayerScores component", () => {
   beforeEach(() => {
-    render(<MultiPlayerScores />);
+    render(<BrowserRouter><MultiPlayerScores /></BrowserRouter>);
   });
 
   it("Maps through all 'h1' & checks role is 'heading'", () => {
@@ -36,7 +36,7 @@ describe("MultiPlayerScores component", () => {
 });
 
 describe("Displaying scores", () => {
-  it("Shows winner main title", async () => {
+  it("Shows winner main title",  () => {
     jest
       .spyOn(axios, "get")
       .mockResolvedValueOnce({ data: { users: [{ scores: {} }] } });
@@ -46,7 +46,7 @@ describe("Displaying scores", () => {
       </BrowserRouter>
     );
 
-    await waitForElementToBeRemoved(() => screen.queryByText("Loading..."));
+    // await waitForElementToBeRemoved(() => screen.queryByText("Loading..."));
 
     const heading = screen.queryByRole("heading", { name: "Winner" });
 

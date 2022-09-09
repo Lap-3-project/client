@@ -72,9 +72,11 @@ describe("Component element roles", () => {
   });
 
   it("Checks 'label' element role = 'label'", () => {
-    const label = screen.queryByRole("label");
-    expect(label).toBeInTheDocument();
-    expect(label).toBeTruthy();
+    const label = screen.queryAllByRole("label");
+    label.forEach((singleObj) => {
+      expect(singleObj).toBeInTheDocument();
+      expect(singleObj).toBeTruthy();
+    });
   });
 
   it("Maps through all 'input' to check roles = 'input'", () => {
