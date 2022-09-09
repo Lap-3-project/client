@@ -90,18 +90,18 @@ const MultiPlayerLogin = () => {
   return (
     <>
       {submitForm && isValid ? null : (
-        <h1 className="header-multi">Create your room</h1>
+        <h1 className="header-multi" role="heading">Create your room</h1>
       )}
 
       {submitForm && isValid ? null : (
 
-        <form onSubmit={handleSubmitForm} id="multiPlayerFormContainer">
-          <label className="label-multi" htmlFor="username">
+        <form onSubmit={handleSubmitForm} id="multiPlayerFormContainer" role="form">
+          <label className="label-multi" htmlFor="username" role="label">
             Choose your Nickname
           </label>
           <input
             autoFocus
-
+            role="input"
             autoComplete="off"
             type="text"
             placeholder="Enter nickname"
@@ -116,7 +116,7 @@ const MultiPlayerLogin = () => {
           ) : null}
           <br />
 
-          <label className="label-multi" htmlFor="room">
+          <label className="label-multi" htmlFor="room" role="label">
             Choose your room name
           </label>
           <input
@@ -135,7 +135,7 @@ const MultiPlayerLogin = () => {
           ) : null}
           <br />
 
-          <label className="label-multi" htmlFor="numOfPlayers">
+          <label className="label-multi" htmlFor="numOfPlayers" role="label">
             How many players (2-5)?
           </label>
           <input

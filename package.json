@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "jest --verbose ",
+    "test": "jest --verbose --watchAll",
     "coverage": "jest --coverage",
     "dev": "vite",
     "build": "vite build",
