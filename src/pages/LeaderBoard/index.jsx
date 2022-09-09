@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 import "./MultiPlayerScores.css";
 
 const LeaderBoard = () => {
   /* state variables for: username & score */
-  const [allPlayers, setAllPlayers] = useState({});
+  const [allPlayers, setAllPlayers] = useState({ users: []});
   const navigate = useNavigate();
 
   const moveBackToCategory = () => {
@@ -53,9 +54,8 @@ const LeaderBoard = () => {
 
   function getAllPlayers() {
     useEffect(() => {
-      fetch("https://universallychallenged.herokuapp.com/users") // "http://127.0.0.1:5173/waiting" or "https://universally-challenged.netlify.app/waiting"
-        .then((response) => response.json())
-        .then((data) => setAllPlayers(data));
+      axios.get("https://universallychallenged.herokuapp.com/users") // "http://127.0.0.1:5173/waiting" or "https://universally-challenged.netlify.app/waiting"
+        .then((response) => setAllPlayers(response.data));
     }, []);
 
     // useEffect(() => {

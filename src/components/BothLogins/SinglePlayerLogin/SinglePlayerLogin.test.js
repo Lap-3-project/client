@@ -17,11 +17,12 @@ import { DataProvider } from "../../../context/dataContext";
 console.log("render==> ", render);
 describe("Running component", () => {
   it("Renders without crashing", () => {
-    render(<DataProvider>
+    render(
         <BrowserRouter>
-          <SinglePlayerLogin />
+          <DataProvider>
+            <SinglePlayerLogin />
+          </DataProvider>
         </BrowserRouter>
-      </DataProvider>
     );
   });
 });
