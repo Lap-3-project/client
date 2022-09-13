@@ -1,9 +1,10 @@
-# LAP 3 Portfolio Week Project
+# LAP 3 Portfolio Week Project - Universally Challenged 
 
-## Client
+## A quiz game built with react
 
 - This is the client repo of the **_Universally Challenged_** quiz game
 - The server of this project can be found [here](https://github.com/Lap-3-project/server)
+- Demo: [https://universally-challenged.netlify.app/](https://universally-challenged.netlify.app/)
 
 ## Installation & Usage
 
